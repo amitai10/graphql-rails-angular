@@ -7,7 +7,4 @@ CompanyType = GraphQL::ObjectType.define do
   field :name, types.String, "The name of the company"
   field :customers, types[CustomerType]
 
-  # connection :customers, CustomerType.connection_type do
-  #   resolve -> (obj, args, context) { [ Customer.new(name: 'amitai') ]}
-  # end
 end

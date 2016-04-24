@@ -3,6 +3,7 @@
     <div>
         <article ng-app="app">
           <div ng-controller="CompanyCtl" ng-init="init()">
+            <select ng-change="update()" ng-options="company.name  for company in companies" ng-model="selected"></select>
             <h2></h2>
             <ul>
               <li ng-repeat="customer in customers">
