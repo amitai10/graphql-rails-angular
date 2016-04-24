@@ -11,7 +11,7 @@ GraphQL comes to solve it.
 ## GraphQL
 [GraphQL](http://graphql.org/) was created in Facebook in 2012. It was used internally for few years and released as open source last year (2015).
 GraphQL is a data query language and runtime designed to request and deliver data to mobile and web apps.
-GraphQL query describes in the request, the data it would like to receive. Insteed of returning the whole object or list, the returned value will be only the requested data. It means less bandwidth and less performance of parsing the returned data.
+GraphQL query describes in the request, the data it would like to receive. Instead of returning the whole object or list, the returned value will be only the requested data. It means less bandwidth and less performance of parsing the returned data.
 Although its name resembles SQL (Structured Query Language - Language for database queries), GraphQL is not intended to be use directly with the database but rather against the application server. Meaning that the server needs to fetch the data from the database (all the data or only part of it, depends on the implementation), and serve it partially to the client.
 In the example above, the server will fetch the company object and all its customers, but will serve only a partial part of the data according to the request.
 
@@ -238,7 +238,6 @@ Html:
         <article ng-app="app">
           <div ng-controller="CompanyCtl" ng-init="init()">
             <select ng-change="update()" ng-options="company.name  for company in companies" ng-model="selected"></select>
-            <h2></h2>
             <ul>
               <li ng-repeat="customer in customers">
                 {{customer.address.city}}
@@ -290,7 +289,6 @@ We will get:
                 {
                     "email": "nicolette.borer@bergnaum.co"
                 },
-
                 {
                     "email": "roscoe_vonrueden@lowe.name"
                 },
@@ -307,8 +305,9 @@ We will get:
 
 ## Conclusion
 GraphQL is a new way to communicate between computers, and especially between client and server.
-It simplify the communication and allows the client to specify its query without handling data it doesn’t need. There is  a lot more to it like mutation (create and update records), cached queries, visual tool for the client that is based on the schema [graphiQL](https://github.com/graphql/graphiql) - just like the old WSDL (the history repeated itself!). The best parctice today is to combine it with [Relay](https://facebook.github.io/relay) and React. There is a [Gem](https://github.com/rmosolgo/graphql-relay-ruby) that abstract the use of it.
+It simplify the communication and allows the client to specify its query without handling data it doesn’t need. There is  a lot more to it like mutation (create and update records), cached queries, visual tool for the client that is based on the schema [graphiQL](https://github.com/graphql/graphiql) - just like the old WSDL (the history repeats itself!). The best parctice today is to combine it with [Relay](https://facebook.github.io/relay) and React. There is a [Gem](https://github.com/rmosolgo/graphql-relay-ruby) that abstract the use of it.
 
 ### Useful references:
+- https://github.com/rmosolgo/graphql-ruby
 - https://blog.jacobwgillespie.com/from-rest-to-graphql-b4e95e94c26b#.skleyq1bm
 - http://www.startuplandia.io/posts/rails-react-relay-graphql-tutorial-queries/
