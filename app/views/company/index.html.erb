@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Our Customers lives in:</h1>
+    <div>
+        <article ng-app="app">
+          <div ng-controller="CompanyCtl" ng-init="init()">
+            <h2></h2>
+            <ul>
+              <li ng-repeat="customer in customers">
+                {{customer.address.city}}
+              </li>
+            </ul>
+          </div>
+        </article>
+    </div>
+</div>

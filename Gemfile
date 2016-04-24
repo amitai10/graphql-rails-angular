@@ -24,8 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'graphql'
-gem 'graphql-relay'
 gem 'awesome_print'
+gem 'bower-rails'
 
 
 # Use ActiveModel has_secure_password
